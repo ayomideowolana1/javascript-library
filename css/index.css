@@ -1,0 +1,89 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #424242;
+}
+
+body{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    background-color: #F2FDFF;
+}
+
+input{
+    padding:10px;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+    border: 1px solid #cecece;
+}
+
+input [type = "checkbox"]{
+    display: inline;
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navBtn{
+    /* display: block; */
+    background-color: #424242;
+    color: white;
+    padding: 10px 10px;
+    text-decoration: none;
+
+}
+
+#table{
+    flex: 1;
+    width: 100%;
+    border: 1px solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top:15px ;
+}
+
+
+
+#formCont{
+    flex: 1;
+    /* width: 100%; */
+}
+
+#tableCont{
+    width: 100%;
+    flex: 1;
+    display: none;
+}
+
+.bookCont{
+    border-left: 5px solid;
+    padding: 15px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+label{
+    font-size: 10px;
+}
+
+p{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.active{
+    /* transform: scale(1.1,1.1); */
+    box-shadow: 0px 0xp 5px 2px black;
+    border: 3px solid;
+}
+
+
+
