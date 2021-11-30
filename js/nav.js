@@ -4,10 +4,10 @@ const formBtn = document.querySelector(".showForm")
 const tableBtn = document.querySelector(".showTable")
 
 function hide(x){
-    x.style.display = "none"
+    x.style.display = "none";
 }
 function show (x){
-    x.style.display = "block"
+    x.style.display = "block";
 }
 
 

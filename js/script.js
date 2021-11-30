@@ -22,7 +22,7 @@ init: function(title,author,numOfPages,read,index){
 
 const addBook = document.querySelector("#addBook")
 let currentBook;
-
+// add a new book
 addBook.addEventListener("click",()=>{
     // if all values are valid
         let details = getFormDetails();
@@ -35,6 +35,7 @@ addBook.addEventListener("click",()=>{
             // add new item to Books list
             Books.push(book)
             clearInputs()
+            alert(`${details.title} added to library`)
         }
         else{
             alert("Incomplete details")
@@ -50,12 +51,15 @@ function renderTable(){
     const table = document.querySelector("#table")
     console.table(Books)
     table.innerHTML = "";
+    // currentBook.classList.add("active")
     
     let cont = document.createElement("div")
     cont.classList.add("bookCont");
     let title = document.createElement("p");
     let author = document.createElement("p");
     let numOfPages = document.createElement("p");
+    let label =  document.createElement("label");
+        label.innerHTML= "I have read this book"
     let read = document.createElement("input");
     read.type="checkbox";
     
@@ -65,7 +69,8 @@ function renderTable(){
         author.innerHTML = `Book author: ${Books[i].author}`;
         numOfPages.innerHTML = `Number of pages: ${Books[i].numOfPages}`;
         read.checked = Books[i].read ;
-        cont.append(title,author,numOfPages,read);
+        label.append(read)
+        cont.append(title,author,numOfPages,label);
         table.append(cont.cloneNode(true));
         
     }
@@ -79,9 +84,11 @@ function renderTable(){
             cont.classList.add("active");
             // clicked book variable
             currentBook =  cont.id;
+            console.log(currentBook)
+            disableButtons()
         })
     })
-
+    
 }
 
 // get for details
@@ -129,9 +136,24 @@ const delBtn = document.querySelector("#deleteBook");
     delBtn.addEventListener("click",()=>{
         Books.pop(currentBook);
         renderTable()
+        currentBook = null
     })
 
 
 
 // initial table redndering
+
+
+// disable buttons
+function disableButtons(){
+    if(!currentBook){
+        delBtn.disabled = true
+        changeReadBtn.disabled = true
+    }else{
+        delBtn.disabled = false
+        changeReadBtn.disabled = false
+    }
+}
+
 renderTable()
+disableButtons()
