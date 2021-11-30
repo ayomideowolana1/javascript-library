@@ -41,26 +41,39 @@ button{
 
 #table{
     flex: 1;
-    width: 100%;
+    /* width: 100%; */
     border: 1px solid;
     padding: 10px;
+    border-radius: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
     margin-top:15px ;
 }
 
-
-
 #formCont{
     flex: 1;
-    /* width: 100%; */
+    box-shadow: 0px 0px 5px black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
 }
 
 #tableCont{
     width: 100%;
+    max-width: 1000px;
     flex: 1;
     display: none;
+    box-shadow: 0px 0px 5px black;
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
 }
 
 .bookCont{
@@ -68,11 +81,20 @@ button{
     padding: 15px;
     padding-left: 10px;
     margin-bottom: 5px;
+    width: 40%;
+    /* flex: 1; */
+    transition: 0.3s ease;
+}
+
+.bookCont:hover{
+    cursor: pointer;
 }
 
 label{
-    font-size: 10px;
+    font-size: 15px;
+    margin-left: 10px;
 }
+
 
 p{
     margin-top: 0px;
@@ -80,10 +102,22 @@ p{
 }
 
 .active{
-    /* transform: scale(1.1,1.1); */
-    box-shadow: 0px 0xp 5px 2px black;
-    border: 3px solid;
+    box-shadow: 0px 0xp 5px  black;
+    border: 5px solid;
 }
 
+.inputLabel{
+    /* border: 1px solid; */
+    display: flex;
+    align-items: center;
+}
 
+#addBook{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
 
+h3{
+    text-align: center;
+}
