@@ -20,17 +20,22 @@
         <input type="text" placeholder="Book Title" id="title">
         <input type="text" placeholder="Author" id="author">
         <input type="number" placeholder="Pages" id="numOfPages">
-        <label for="bookRead">
-            I have read this book
-            <input type="checkbox" id="read">
-        </label>
+        <div class="inputLabel">
+            <input type="checkbox" id="read"> 
+            <label for="bookRead"> I have read this book </label>
+        </div>
+
+        
         <button id="addBook">add book to library</button>
     </div>
     
     <div id="tableCont">
         <h3>All my books</h3>
-        <button id="deleteBook">delete book</button>
-        <button id= "changeRead">change read</button>
+        
+        <div style="display: flex; flex-direction: row; justify-content: center; gap: 20px;">
+            <button id="deleteBook">delete book</button>
+            <button id= "changeRead">change read</button>
+        </div>
         <div id="table">
             
         </div>
